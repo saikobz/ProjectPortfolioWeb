@@ -1,12 +1,15 @@
 export type Locale = "th" | "en";
 
 export const siteConfig = {
-  name: "Your Name",
-  cvPath: "/cv.pdf",
+  name: {
+    th: "ภาดล เกตุจันทร์",
+    en: "Padon Kedchan",
+  },
+  resumePath: "/resume.pdf",
   links: {
-    email: "your.email@example.com",
+    email: "kedchanpadon@gmail.com",
     github: "https://github.com/saikobz",
-    linkedin: "https://linkedin.com/in/your-profile",
+    linkedin: "https://www.linkedin.com/in/padon-kedchan-913685337/",
   },
 } as const;
 
@@ -124,7 +127,7 @@ export const content = {
     hero: {
       role: "Junior Full Stack Developer",
       tagline: "สร้าง web app ที่ใช้ AI — ตั้งแต่ UI ถึง API และฐานข้อมูล",
-      ctaCv: "ดาวน์โหลด CV",
+      ctaResume: "ดาวน์โหลด Resume",
       ctaGithub: "GitHub",
       ctaLinkedin: "LinkedIn",
     },
@@ -159,9 +162,9 @@ export const content = {
       title: "ประสบการณ์ & การศึกษา",
       items: [
         {
-          period: "2022 – ปัจจุบัน",
-          title: "มหาวิทยาลัย / สาขา (แก้ไข)",
-          description: "กำลังศึกษา / จบการศึกษา — ใส่รายละเอียดจริงของคุณ",
+          period: "2022 – 2026",
+          title: "มหาวิทยาลัยศิลปากร / สาขา (เทคโนโลยีสารสนเทศ)",
+          description: "จบการศึกษา",
         },
       ],
     },
@@ -169,7 +172,7 @@ export const content = {
       title: "ติดต่อ",
       subtitle: "เปิดรับโอกาสงาน Full Stack Junior",
       email: "อีเมล",
-      downloadCv: "ดาวน์โหลด CV",
+      downloadResume: "ดาวน์โหลด Resume",
     },
     caseStudy: {
       back: "← กลับ",
@@ -187,7 +190,7 @@ export const content = {
     hero: {
       role: "Junior Full Stack Developer",
       tagline: "Building AI-powered web apps — from UI to API and database",
-      ctaCv: "Download CV",
+      ctaResume: "Download Resume",
       ctaGithub: "GitHub",
       ctaLinkedin: "LinkedIn",
     },
@@ -222,9 +225,9 @@ export const content = {
       title: "Experience & Education",
       items: [
         {
-          period: "2022 – Present",
-          title: "University / Major (edit me)",
-          description: "Studying / graduated — replace with your details.",
+          period: "2022 – 2026",
+          title: "Silpakorn University / Major (Information Technology)",
+          description: "Graduated",
         },
       ],
     },
@@ -232,7 +235,7 @@ export const content = {
       title: "Contact",
       subtitle: "Open to Junior Full Stack opportunities",
       email: "Email",
-      downloadCv: "Download CV",
+      downloadResume: "Download Resume",
     },
     caseStudy: {
       back: "← Back",

@@ -18,7 +18,7 @@ const ibmPlexSansThai = IBM_Plex_Sans_Thai({
 });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Junior Full Stack Developer`,
+  title: `${siteConfig.name.en} | Junior Full Stack Developer`,
   description: "Portfolio — Full Stack developer building AI-powered web applications.",
 };
 

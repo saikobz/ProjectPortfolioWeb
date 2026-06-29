@@ -1,22 +1,22 @@
 import { siteConfig } from "@/content/site";
 import type { Content } from "@/content/site";
 
-export function Hero({ t }: { t: Content }) {
+export function Hero({ name, t }: { name: string; t: Content }) {
   return (
     <section className="mx-auto max-w-5xl px-6 py-20 md:py-28">
       <p className="mb-3 text-sm font-medium uppercase tracking-widest text-accent">{t.hero.role}</p>
       <h1 className="font-heading text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-        {siteConfig.name}
+        {name}
       </h1>
       <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted md:text-xl">{t.hero.tagline}</p>
 
       <div className="mt-10 flex flex-wrap gap-3">
         <a
-          href={siteConfig.cvPath}
+          href={siteConfig.resumePath}
           download
           className="inline-flex items-center rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
         >
-          {t.hero.ctaCv}
+          {t.hero.ctaResume}
         </a>
         <a
           href={siteConfig.links.github}
@@ -78,11 +78,11 @@ export function Contact({ t }: { t: Content }) {
             GitHub
           </a>
           <a
-            href={siteConfig.cvPath}
+            href={siteConfig.resumePath}
             download
             className="inline-flex w-fit items-center rounded-lg border border-border px-4 py-2 text-sm font-medium transition-colors hover:bg-background"
           >
-            {t.contact.downloadCv}
+            {t.contact.downloadResume}
           </a>
         </div>
       </div>
