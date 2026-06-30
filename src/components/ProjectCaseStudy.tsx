@@ -25,19 +25,29 @@ export function ProjectCaseStudy({ project }: { project: Project }) {
 
         {project.screenshots.length > 0 && (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {project.screenshots.map((shot) => (
-              <Image
-                key={shot.src}
-                src={shot.src}
-                alt={shot.alt[locale]}
-                width={1200}
-                height={750}
-                loading="lazy"
-                className={`w-full rounded-xl border border-border object-cover ${
-                  project.screenshots.length === 1 ? "sm:col-span-2" : ""
-                }`}
-              />
-            ))}
+            {project.screenshots.map((shot) => {
+              const portrait = project.imageHeight != null && project.imageWidth != null && project.imageHeight > project.imageWidth;
+              const width = project.imageWidth ?? 1200;
+              const height = project.imageHeight ?? 750;
+
+              return (
+                <div
+                  key={shot.src}
+                  className={`overflow-hidden rounded-xl border border-border ${
+                    portrait ? "mx-auto w-full max-w-sm bg-[#0a0b10] p-4 sm:col-span-2" : ""
+                  } ${!portrait && project.screenshots.length === 1 ? "sm:col-span-2" : ""}`}
+                >
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt[locale]}
+                    width={width}
+                    height={height}
+                    loading="lazy"
+                    className={`w-full ${portrait ? "h-auto object-contain" : "object-cover"}`}
+                  />
+                </div>
+              );
+            })}
           </div>
         )}
 

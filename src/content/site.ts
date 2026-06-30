@@ -22,6 +22,8 @@ export type Project = {
   github: string;
   stack: string[];
   thumbnail: string;
+  imageWidth?: number;
+  imageHeight?: number;
   title: Record<Locale, string>;
   subtitle: Record<Locale, string>;
   description: Record<Locale, string>;
@@ -36,7 +38,9 @@ export const projects: Project[] = [
     flagship: true,
     github: "https://github.com/saikobz/project-music",
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "PyTorch"],
-    thumbnail: "/projects/harmoniq.svg",
+    thumbnail: "/projects/harmoniq.png",
+    imageWidth: 484,
+    imageHeight: 872,
     title: { th: "HarmoniQ", en: "HarmoniQ" },
     subtitle: {
       th: "AI แยก stem และ mastering เพลง",
@@ -59,7 +63,7 @@ export const projects: Project[] = [
       ],
     },
     screenshots: [
-      { src: "/projects/harmoniq.svg", alt: { th: "HarmoniQ — มุมมองแยก stem พร้อม waveform", en: "HarmoniQ — stem separation view with waveforms" } },
+      { src: "/projects/harmoniq.png", alt: { th: "HarmoniQ — มุมมองแยก stem พร้อม waveform", en: "HarmoniQ — stem separation view with waveforms" } },
     ],
     caseStudy: {
       th: {
