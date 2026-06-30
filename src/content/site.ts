@@ -5,7 +5,7 @@ export const siteConfig = {
     th: "ภาดล เกตุจันทร์",
     en: "Padon Kedchan",
   },
-  resumePath: "/resume.pdf",
+  resumePath: "/resume_Padon Kedchan.pdf",
   profileImage: "/profile.jpg",
   links: {
     email: "kedchanpadon@gmail.com",
@@ -138,7 +138,7 @@ export const content = {
     nav: { about: "เกี่ยวกับ", projects: "โปรเจกต์", skills: "ทักษะ", experience: "ประสบการณ์", contact: "ติดต่อ", skip: "ข้ามไปยังเนื้อหา" },
     hero: {
       role: "Junior Full Stack Developer",
-      tagline: "สร้าง web app ที่ใช้ AI — ตั้งแต่ UI ถึง API และฐานข้อมูล",
+      tagline: "สร้างเว็บแอปพลิเคชันตั้งแต่ UI ถึง API และฐานข้อมูล",
       available: "เปิดรับงาน Full Stack Junior",
       ctaResume: "ดาวน์โหลด Resume",
       ctaGithub: "GitHub",
@@ -203,7 +203,7 @@ export const content = {
     nav: { about: "About", projects: "Projects", skills: "Skills", experience: "Experience", contact: "Contact", skip: "Skip to content" },
     hero: {
       role: "Junior Full Stack Developer",
-      tagline: "Building AI-powered web apps — from UI to API and database",
+      tagline: "Building web applications from UI to API and database",
       available: "Open to Junior Full Stack roles",
       ctaResume: "Download Resume",
       ctaGithub: "GitHub",
