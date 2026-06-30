@@ -6,6 +6,7 @@ export const siteConfig = {
     en: "Padon Kedchan",
   },
   resumePath: "/resume.pdf",
+  profileImage: "/profile.jpg",
   links: {
     email: "kedchanpadon@gmail.com",
     github: "https://github.com/saikobz",
@@ -25,6 +26,7 @@ export type Project = {
   subtitle: Record<Locale, string>;
   description: Record<Locale, string>;
   highlights: Record<Locale, string[]>;
+  screenshots: { src: string; alt: Record<Locale, string> }[];
   caseStudy?: Record<Locale, { problem: string; solution: string; role: string; learnings: string[] }>;
 };
 
@@ -56,6 +58,9 @@ export const projects: Project[] = [
         "REST API integration with ML inference pipeline",
       ],
     },
+    screenshots: [
+      { src: "/projects/harmoniq.svg", alt: { th: "HarmoniQ — มุมมองแยก stem พร้อม waveform", en: "HarmoniQ — stem separation view with waveforms" } },
+    ],
     caseStudy: {
       th: {
         problem: "การแยก stem และ mastering มืออาชีพใช้เครื่องมือแพงและซับซ้อน",
@@ -98,6 +103,9 @@ export const projects: Project[] = [
         "Next.js App Router frontend with TypeScript",
       ],
     },
+    screenshots: [
+      { src: "/projects/documind.svg", alt: { th: "DocuMind — รายการเอกสารและสรุปด้วย AI", en: "DocuMind — document list with AI summary panel" } },
+    ],
     caseStudy: {
       th: {
         problem: "ทีมมีเอกสารกระจายหลายที่ หาไม่เจอและใช้เวลาอ่านยาว",
@@ -123,10 +131,11 @@ export const projects: Project[] = [
 
 export const content = {
   th: {
-    nav: { about: "เกี่ยวกับ", projects: "โปรเจกต์", skills: "ทักษะ", experience: "ประสบการณ์", contact: "ติดต่อ" },
+    nav: { about: "เกี่ยวกับ", projects: "โปรเจกต์", skills: "ทักษะ", experience: "ประสบการณ์", contact: "ติดต่อ", skip: "ข้ามไปยังเนื้อหา" },
     hero: {
       role: "Junior Full Stack Developer",
       tagline: "สร้าง web app ที่ใช้ AI — ตั้งแต่ UI ถึง API และฐานข้อมูล",
+      available: "เปิดรับงาน Full Stack Junior",
       ctaResume: "ดาวน์โหลด Resume",
       ctaGithub: "GitHub",
       ctaLinkedin: "LinkedIn",
@@ -170,6 +179,7 @@ export const content = {
     },
     contact: {
       title: "ติดต่อ",
+      headline: "มาสร้างอะไรด้วยกัน",
       subtitle: "เปิดรับโอกาสงาน Full Stack Junior",
       email: "อีเมล",
       downloadResume: "ดาวน์โหลด Resume",
@@ -183,13 +193,14 @@ export const content = {
       learnings: "สิ่งที่เรียนรู้",
       github: "ดูโค้ดบน GitHub",
     },
-    footer: "สร้างด้วย Next.js · Portfolio",
+    footer: "สร้างโดย ภาดล เกตุจันทร์",
   },
   en: {
-    nav: { about: "About", projects: "Projects", skills: "Skills", experience: "Experience", contact: "Contact" },
+    nav: { about: "About", projects: "Projects", skills: "Skills", experience: "Experience", contact: "Contact", skip: "Skip to content" },
     hero: {
       role: "Junior Full Stack Developer",
       tagline: "Building AI-powered web apps — from UI to API and database",
+      available: "Open to Junior Full Stack roles",
       ctaResume: "Download Resume",
       ctaGithub: "GitHub",
       ctaLinkedin: "LinkedIn",
@@ -202,7 +213,7 @@ export const content = {
       title: "Projects",
       viewCaseStudy: "View case study",
       viewGithub: "GitHub",
-      flagship: "Featured",
+      flagship: "Main",
     },
     skills: {
       title: "Skills",
@@ -233,6 +244,7 @@ export const content = {
     },
     contact: {
       title: "Contact",
+      headline: "Let's build something together",
       subtitle: "Open to Junior Full Stack opportunities",
       email: "Email",
       downloadResume: "Download Resume",
@@ -246,7 +258,7 @@ export const content = {
       learnings: "Learnings",
       github: "View code on GitHub",
     },
-    footer: "Built with Next.js · Portfolio",
+    footer: "Created by Padon Kedchan",
   },
 } as const;
 

@@ -1,0 +1,18 @@
+---
+description: React/Next UI and performance skills for src/
+globs: src/**/*.{ts,tsx,css}
+alwaysApply: false
+---
+
+# React / Next.js in this repo
+
+Before editing matched files, read:
+
+1. `.agents/skills/ponytail/SKILL.md` — minimal diff, no over-engineering
+2. `.agents/skills/vercel-react-best-practices/SKILL.md` — performance patterns
+
+For visual changes, also read `.agents/skills/frontend-design/SKILL.md` and align with `CONTEXT.md` (light minimal, TH default).
+
+- Prefer Server Components; add `"use client"` only when needed (i18n, interactivity)
+- Content in `src/content/site.ts`, not hardcoded in components
+- Keep bundle lean — no new deps without ponytail justification

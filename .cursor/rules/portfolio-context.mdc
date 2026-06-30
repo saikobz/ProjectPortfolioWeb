@@ -1,0 +1,12 @@
+---
+description: Portfolio domain glossary and product constraints
+alwaysApply: true
+---
+
+# Portfolio context
+
+Read `CONTEXT.md` when changing copy, projects, contact, or design direction.
+
+Fixed decisions: landing page (not a backend demo), bilingual toggle same URL (TH default), contact = email/LinkedIn/GitHub only, resume PDF at `public/resume.pdf`, projects HarmoniQ + DocuMind.
+
+Candidate: Padon Kedchan / ภาดล เกตุจันทร์ — junior Full Stack.

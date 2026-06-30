@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/sections";
@@ -13,32 +14,58 @@ export function ProjectCaseStudy({ project }: { project: Project }) {
   return (
     <>
       <Header />
-      <main className="mx-auto max-w-3xl px-6 py-12 md:py-16">
+      <main id="main" className="mx-auto max-w-3xl px-6 py-16 md:py-24">
         <Link href="/#projects" className="text-sm text-muted transition-colors hover:text-foreground">
           {t.caseStudy.back}
         </Link>
 
-        <h1 className="mt-6 font-heading text-3xl font-bold md:text-4xl">{project.title[locale]}</h1>
-        <p className="mt-2 text-lg text-muted">{project.subtitle[locale]}</p>
-        <p className="mt-6 leading-relaxed text-muted">{project.description[locale]}</p>
+        <h1 className="mt-8 font-heading text-4xl font-bold tracking-tight md:text-5xl">{project.title[locale]}</h1>
+        <p className="mt-3 text-lg text-muted md:text-xl">{project.subtitle[locale]}</p>
+        <p className="mt-6 text-base leading-relaxed text-muted">{project.description[locale]}</p>
+
+        {project.screenshots.length > 0 && (
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {project.screenshots.map((shot) => (
+              <Image
+                key={shot.src}
+                src={shot.src}
+                alt={shot.alt[locale]}
+                width={1200}
+                height={750}
+                loading="lazy"
+                className={`w-full rounded-xl border border-border object-cover ${
+                  project.screenshots.length === 1 ? "sm:col-span-2" : ""
+                }`}
+              />
+            ))}
+          </div>
+        )}
 
         {study && (
-          <div className="mt-12 space-y-10">
+          <div className="mt-14 space-y-10">
             <section>
-              <h2 className="font-heading text-lg font-semibold">{t.caseStudy.problem}</h2>
-              <p className="mt-3 text-muted">{study.problem}</p>
+              <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                {t.caseStudy.problem}
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-foreground/90">{study.problem}</p>
             </section>
             <section>
-              <h2 className="font-heading text-lg font-semibold">{t.caseStudy.solution}</h2>
-              <p className="mt-3 text-muted">{study.solution}</p>
+              <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                {t.caseStudy.solution}
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-foreground/90">{study.solution}</p>
             </section>
             <section>
-              <h2 className="font-heading text-lg font-semibold">{t.caseStudy.role}</h2>
-              <p className="mt-3 text-muted">{study.role}</p>
+              <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                {t.caseStudy.role}
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-foreground/90">{study.role}</p>
             </section>
             <section>
-              <h2 className="font-heading text-lg font-semibold">{t.caseStudy.learnings}</h2>
-              <ul className="mt-3 list-inside list-disc space-y-2 text-muted">
+              <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                {t.caseStudy.learnings}
+              </h2>
+              <ul className="mt-3 list-inside list-disc space-y-2 text-foreground/90">
                 {study.learnings.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -47,9 +74,11 @@ export function ProjectCaseStudy({ project }: { project: Project }) {
           </div>
         )}
 
-        <section className="mt-12">
-          <h2 className="font-heading text-lg font-semibold">{t.caseStudy.stack}</h2>
-          <ul className="mt-3 flex flex-wrap gap-2">
+        <section className="mt-14">
+          <h2 className="font-heading text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            {t.caseStudy.stack}
+          </h2>
+          <ul className="mt-4 flex flex-wrap gap-2">
             {project.stack.map((tech) => (
               <li key={tech} className="rounded-lg border border-border bg-surface px-3 py-1.5 text-sm">
                 {tech}
@@ -62,7 +91,7 @@ export function ProjectCaseStudy({ project }: { project: Project }) {
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-10 inline-flex rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
+          className="mt-12 inline-flex rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all hover:bg-accent-hover hover:shadow-md"
         >
           {t.caseStudy.github}
         </a>

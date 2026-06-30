@@ -1,0 +1,21 @@
+---
+description: Auto-route to project skills in .agents/skills before acting
+alwaysApply: true
+---
+
+# Project skills (auto)
+
+Skills live in `.agents/skills/` (see `skills-lock.json`). **Read the matching SKILL.md before implementing.**
+
+| Task | Skill file |
+|------|------------|
+| Any code | `.agents/skills/ponytail/SKILL.md` |
+| UI / design | `.agents/skills/frontend-design/SKILL.md` |
+| `src/**/*.{ts,tsx}` React/Next | `.agents/skills/vercel-react-best-practices/SKILL.md` |
+| UI review, a11y, pre-deploy | `.agents/skills/web-design-guidelines/SKILL.md` |
+| Planning / grilling | `.agents/skills/grill-me/SKILL.md` |
+| Find or install skills | `.agents/skills/find-skills/SKILL.md` |
+
+Full routing and conventions: `AGENTS.md`. Domain glossary: `CONTEXT.md`.
+
+UI work: apply **frontend-design + ponytail + vercel-react-best-practices**. Before deploy: run **web-design-guidelines** on changed UI files.

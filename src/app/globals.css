@@ -1,29 +1,95 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #ffffff;
-  --color-surface: #f9fafb;
-  --color-foreground: #111827;
-  --color-muted: #6b7280;
-  --color-accent: #2563eb;
-  --color-accent-hover: #1d4ed8;
-  --color-border: #e5e7eb;
+  --color-background: #fcfcfd;
+  --color-surface: #f3f4f8;
+  --color-surface-2: #eceef3;
+  --color-foreground: #0e1014;
+  --color-muted: #656973;
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-accent-soft: #eef0ff;
+  --color-border: #e7e8ec;
+  --color-available: #10b981;
   --font-sans: var(--font-body);
   --font-heading: var(--font-heading);
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-rise,
+  .animate-ping {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
 
 body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-heading), system-ui, sans-serif;
+  font-family: var(--font-heading), var(--font-body), system-ui, sans-serif;
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-foreground);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero-rise {
+  opacity: 0;
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.hero-rise:nth-child(1) {
+  animation-delay: 0.08s;
+}
+.hero-rise:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.hero-rise:nth-child(3) {
+  animation-delay: 0.28s;
+}
+.hero-rise:nth-child(4) {
+  animation-delay: 0.38s;
+}
+.hero-rise:nth-child(5) {
+  animation-delay: 0.48s;
 }

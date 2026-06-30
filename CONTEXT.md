@@ -2,7 +2,7 @@
 
 ## Portfolio (this site)
 
-A bilingual landing page for job applications. Primary goal: a recruiter reads it in under 60 seconds and clicks through to GitHub, CV, or a live project demo. The site itself is not a Full Stack demo; backend skills are shown via separate project case studies.
+A bilingual landing page for job applications. Primary goal: a recruiter reads it in under 60 seconds and clicks through to GitHub, resume, or a live project demo. The site itself is not a Full Stack demo; backend skills are shown via separate project case studies.
 
 ## Audience
 
@@ -24,9 +24,9 @@ AI music stem separation and mastering. Stack: Next.js, React, TypeScript, Tailw
 
 Direct links only: email, LinkedIn, and GitHub. No contact form.
 
-## CV
+## Resume
 
-Downloadable PDF from the site (e.g. `public/cv.pdf`). Primary CTA in Hero and repeated in Contact section.
+Downloadable PDF from the site (`public/resume.pdf`). Primary CTA in Hero and repeated in Contact section.
 
 ## DocuMind
 

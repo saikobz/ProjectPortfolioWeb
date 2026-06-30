@@ -14,7 +14,7 @@ export function HomePage() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <Hero name={siteConfig.name[locale]} t={t} />
         <About t={t} />
         <ProjectsSection />
