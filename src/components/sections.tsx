@@ -82,7 +82,7 @@ export function About({ t }: { t: Content }) {
     <section id="about" className="border-t border-border bg-surface">
       <div className="mx-auto max-w-5xl px-6 py-16 md:py-24">
         <Eyebrow>{t.about.title}</Eyebrow>
-        <h2 className="mt-5 max-w-3xl font-heading text-3xl font-semibold leading-tight md:text-4xl">
+        <h2 className="mt-5 max-w font-heading text-3xl font-semibold leading-tight md:text-4xl">
           {t.about.body}
         </h2>
       </div>

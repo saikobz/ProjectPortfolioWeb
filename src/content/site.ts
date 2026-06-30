@@ -146,7 +146,7 @@ export const content = {
     },
     about: {
       title: "เกี่ยวกับ",
-      body: "นักพัฒนา Full Stack ระดับ junior ที่ถนัด React, Next.js และ Node.js พร้อมประสบการณ์จากโปรเจกต์จริง กำลังมองหาตำแหน่ง Full Stack เพื่อเรียนรู้และสร้าง product ที่มีประสิทธิภาพ",
+      body: "บัณฑิตสาขาเทคโนโลยีสารสนเทศที่มีประสบการณ์ในการพัฒนา Full-stack และ AI มีความเชี่ยวชาญในการสร้างเว็บแอปพลิเคชันด้วย React และ Node.js รวมถึงพัฒนา AI แยกและปรับแต่งเสียงดนตรีโดยใช้เทคโนโลยี Deep Learning มีความมุ่งมั่นที่จะร่วมเป็นส่วนหนึ่งของทีมที่มีการทำงานร่วมกัน และพร้อมพัฒนาทักษะด้าน Full-stack Engineering ให้ก้าวหน้ายิ่งขึ้น ",
     },
     projects: {
       title: "โปรเจกต์",
@@ -164,11 +164,11 @@ export const content = {
         tools: "Tools",
       },
       items: {
-        frontend: ["React", "Vue", "Next.js", "TypeScript", "Tailwind CSS", "HTML"],
+        frontend: ["React", "Vue", "Next.js", "TypeScript", "Tailwind CSS", "Bootstrap", "HTML"],
         backend: ["Node.js", "REST API", "Python", "FastAPI"],
-        database: ["MySQL", "PostgreSQL", "Supabase"],
-        ai: ["PyTorch", "AI summaries"],
-        tools: ["Git", "Vercel"],
+        database: ["MySQL", "PostgreSQL", "MongoDB"],
+        ai: ["PyTorch", "CNN Model", "LSTM Model", "Open-Unmix"],
+        tools: ["Git", "Github", "Vercel", "Docker", "Postman", "VSCode", "Cursor"],
       },
     },
     experience: {
@@ -211,7 +211,7 @@ export const content = {
     },
     about: {
       title: "About",
-      body: "Junior Full Stack developer skilled in React, Next.js, and Node.js, with hands-on from real projects. Looking for a Full Stack role to learn and ship impactful products.",
+      body: "Information Technology graduate with hands-on experience in full-stack development and AI. Proficient in building web applications with React and Node.js, and developing AI-driven music transcription systems using Python and deep learning. Passionate about contributing to a collaborative team and advancing my expertise in full-stack engineering.",
     },
     projects: {
       title: "Projects",
@@ -229,11 +229,11 @@ export const content = {
         tools: "Tools",
       },
       items: {
-        frontend: ["React", "Vue", "Next.js", "TypeScript", "Tailwind CSS", "HTML"],
+        frontend: ["React", "Vue", "Next.js", "TypeScript", "Tailwind CSS", "Bootstrap", "HTML"],
         backend: ["Node.js", "REST API", "Python", "FastAPI"],
-        database: ["MySQL", "PostgreSQL", "Supabase"],
-        ai: ["PyTorch", "AI summaries"],
-        tools: ["Git", "Vercel"],
+        database: ["MySQL", "PostgreSQL", "MongoDB"],
+        ai: ["PyTorch", "CNN Model", "LSTM Model", "Open-Unmix"],
+        tools: ["Git", "Github", "Vercel", "Docker", "Postman", "VSCode", "Cursor"],
       },
     },
     experience: {
