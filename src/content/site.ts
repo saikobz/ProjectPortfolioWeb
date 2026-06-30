@@ -146,7 +146,7 @@ export const content = {
     },
     about: {
       title: "เกี่ยวกับ",
-      body: "นักพัฒนา Full Stack ระดับ junior ที่ถนัด React, Next.js และ Node.js พร้อมประสบการณ์ Python และ AI จากโปรเจกต์จริง กำลังมองหาตำแหน่ง Full Stack เพื่อเรียนรู้และสร้าง product ที่มี impact",
+      body: "นักพัฒนา Full Stack ระดับ junior ที่ถนัด React, Next.js และ Node.js พร้อมประสบการณ์จากโปรเจกต์จริง กำลังมองหาตำแหน่ง Full Stack เพื่อเรียนรู้และสร้าง product ที่มีประสิทธิภาพ",
     },
     projects: {
       title: "โปรเจกต์",
@@ -211,7 +211,7 @@ export const content = {
     },
     about: {
       title: "About",
-      body: "Junior Full Stack developer skilled in React, Next.js, and Node.js, with hands-on Python and AI experience from real projects. Looking for a Full Stack role to learn and ship impactful products.",
+      body: "Junior Full Stack developer skilled in React, Next.js, and Node.js, with hands-on from real projects. Looking for a Full Stack role to learn and ship impactful products.",
     },
     projects: {
       title: "Projects",
